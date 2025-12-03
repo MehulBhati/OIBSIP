@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Reservations</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="table-container">
+    <h2>My Reservations</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>PNR</th>
+            <th>Name</th>
+            <th>Train No</th>
+            <th>Train Name</th>
+            <th>Class</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="r : ${list}">
+            <td th:text="${r.pnr}"></td>
+            <td th:text="${r.name}"></td>
+            <td th:text="${r.trainNumber}"></td>
+            <td th:text="${r.trainName}"></td>
+            <td th:text="${r.classType}"></td>
+            <td th:text="${r.source}"></td>
+            <td th:text="${r.destination}"></td>
+            <td th:text="${r.journeyDate}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cancel Ticket</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Cancel Reservation</h2>
+    <div class="message" th:text="${message}"></div>
+    <form th:action="@{/cancel}" method="post">
+        <label>PNR:</label><input name="pnr" required>
+        <button type="submit">Cancel Ticket</button>
+    </form>
+</div>
+</body>
+</html>

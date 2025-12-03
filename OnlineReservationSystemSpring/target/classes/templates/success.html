@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reservation Successful</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container" style="text-align:center;">
+    <img src="/images/ticket.png" alt="Ticket" style="width:120px;margin-bottom:10px;">
+    <h2>Reservation Successful!</h2>
+    <p>PNR: <strong th:text="${pnr}"></strong></p>
+    <a th:href="@{/reserve}">Book Another Ticket</a>
+</div>
+</body>
+</html>
